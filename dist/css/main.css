@@ -39,21 +39,21 @@
     overflow: hidden; }
   .menu-nav {
     padding: 0;
-    background: #444;
+    background: #2d2d2d;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #2d2d2d;
+    background: #444;
     transition: all 0.5s ease-out;
     transform: translate3d(0, 100%, 0); }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .potrait {
-      width: 280px;
-      height: 280px;
+      width: 250px;
+      height: 250px;
       background: url("../img/astro2.jpg");
       background-position: -30px 0;
       background-size: cover;
@@ -90,6 +90,38 @@
 
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 70vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px;
+    margin: 0; }
+  .menu-branding {
+    margin: 0;
+    height: 30vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .potrait {
+      width: 150px;
+      height: 150px; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; } }
 
 * {
   box-sizing: border-box; }
