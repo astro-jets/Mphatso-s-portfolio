@@ -72,8 +72,23 @@
 //Smart Phones
 @include mediaSm{
     main#home h1{
+        font-size: 60px;
         margin-top: 10vh;
     }
+    main#about h1,
+    main#contact h1,
+    main#work h1{
+        font-size: 60px;
+    }
+
+    .boxes div{
+        padding: 1.5rem 1rem;
+    }
+
+    .bio,.job{
+        margin-right:60px;
+    }
+
 
     .projects{
         grid-template-columns: 1fr;
